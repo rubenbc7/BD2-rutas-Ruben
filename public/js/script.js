@@ -1,1 +1,1 @@
-alert('Prueba de a');
+alert('Prueba de assets en laravel');
