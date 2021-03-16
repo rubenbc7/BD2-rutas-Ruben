@@ -40,7 +40,7 @@
                 </p>
             </div>
             <div class="license">
-                <p>© 2021 Derechos Reservados - rubencito TECNOLOGIAS</p>
+                <p>© 2021 Derechos Reservados - MAWE TECNOLOGIAS</p>
             </div>
         </footer>
     </div>
