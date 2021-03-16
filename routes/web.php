@@ -27,3 +27,5 @@ Route::get('agregar', 'App\Http\Controllers\NotasController@agregar');
 Route::post('crear', 'App\Http\Controllers\NotasController@store')->name('notas.store');
 
 Route::get('notas/{id}/editar', 'App\Http\Controllers\NotasController@edit')->name('notas.edit');
+
+Route::put('notas/{notas}/editar', 'App\Http\Controllers\NotasController@update')->name('notas.update');
