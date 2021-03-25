@@ -1,48 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Notas</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
-    <!--<script type="text/javascript" src="{{ asset('js/script.js') }}"></script>-->
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <div class="wrap">
-        <header class="head">
-            <a href="#" class="logo"></a>
 
-            <nav class="main-nav">
-                <ul class="main-nav-list">
-                    <li class="main-nav-item active">
-                        <a href="{{ route('notas.index')}}" class="main-nav-link">
-                            <i class="icon icon-th-list"></i>
-                            <span>Ver notas</span>
-                        </a>
-                    </li>
-                    <li class="main-nav-item ">
-                        <a href="{{ url('agregar') }}" class="main-nav-link">
-                            <i class="icon icon-pen"></i>
-                            <span>Nueva nota</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
+
+    <title>CRUD con Laravel EJ. PARCIAL</title>
+  </head>
+  <body>
+    <div class="container">
+    <h1 class="bg-primary text-white text-center mb-3">CRUD con Laravel EJ. PARCIAL</h1>
 
     @yield('content')
 
-        <footer class="foot">
-            <div class="ad">
-                <p>
-                    Esta aplicación es desarrollada en el cursos de IPM
-                    <a href="https://mawe.mx">Primeros pasos con Laravel </a>.
-                </p>
-            </div>
-            <div class="license">
-                <p>© 2021 Derechos Reservados - MAWE TECNOLOGIAS</p>
-            </div>
-        </footer>
     </div>
-</body>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper.js and Bootstrap JS
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-t6I8D5dJmMXjCsRLhSzCltuhNZg6P10kE0m0nAncLUjH6GeYLhRU1zfLoW3QNQDF" crossorigin="anonymous"></script>
+    -->
+  </body>
 </html>

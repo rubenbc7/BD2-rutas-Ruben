@@ -1,26 +1,30 @@
-        @extends('layout')
-        
-        @section('content')
-        <main class="content">
-            <div class="cards">
-                <div class="card card-center">
-                    <div class="card-body">
-                        <h1>{{ $notas->titulo }}</h1>
+@extends('layout')
+    @section('content')
+    <div class="container">
 
-                        <form method="POST" action="{{ url("notas/{$notas->id}/editar") }}">
-                            @csrf
-                            @method('PUT')
-                            <label for="title" class="field-label">Título: </label>
-                            <input type="text" name="title" id="title" class="field-input" value="{!! $notas->contenido !!}">
+        <h2>EDITAR REGISTROS</h2>
 
-                            <label for="content" class="field-label">Contenido:</label>
-                            <textarea name="content" id="content" rows="10" class="field-textarea">{!! $notas->contenido !!}</textarea>
-
-                            <button type="submit" class="btn btn-primary">Actualizar nota</button>
-                        </form>
-                    </div>
+            <form action="{{ url("cruds/{$cruds->id}/editar") }}" method="POST">
+                @csrf
+                @method('PUT')
+                <div class="mb-3">
+                <label for="" class="form-label">Código</label>
+                <input id="codigo" name="codigo" type="text" class="form-control" value="{{ $cruds->codigo }}">    
                 </div>
-            </div>
-        </main>
-        @endsection
-        
+                <div class="mb-3">
+                <label for="" class="form-label">Descripción</label>
+                <input id="descripcion" name="descripcion" type="text" class="form-control" value="{{ $cruds->descripcion }}">
+                </div>
+                <div class="mb-3">
+                <label for="" class="form-label">Cantidad</label>
+                <input id="cantidad" name="cantidad" type="number" class="form-control" value="{{ $cruds->cantidad }}">
+                </div>
+                <div class="mb-3">
+                <label for="" class="form-label">Precio</label>
+                <input id="precio" name="precio" type="number" step="any" class="form-control" value="{{ $cruds->precio }}">
+                </div>
+                <a href="{{ url('cruds')}}" class="btn btn-secondary">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+    </div>
+    @endsection

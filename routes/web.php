@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use App\Models\Cruds;
 use Illuminate\Http\Request;
-use App\Models\Notas;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,16 +16,14 @@ use App\Models\Notas;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('cruds', 'App\Http\Controllers\CrudsController@index')->name('cruds.index');
 
-Route::get('notas', 'App\Http\Controllers\NotasController@index')->name('notas.index');
+Route::get('agregar', 'App\Http\Controllers\CrudsController@agregar')->name('cruds.agregar');
 
-Route::get('agregar', 'App\Http\Controllers\NotasController@agregar');
+Route::post('crear', 'App\Http\Controllers\CrudsController@crear')->name('cruds.store');
 
-Route::post('crear', 'App\Http\Controllers\NotasController@store')->name('notas.store');
+Route::get('cruds/{id}/editar', 'App\Http\Controllers\CrudsController@editar')->name('cruds.editar');
 
-Route::get('notas/{id}/editar', 'App\Http\Controllers\NotasController@edit')->name('notas.edit');
+Route::put('cruds/{cruds}/editar', 'App\Http\Controllers\CrudsController@update')->name('cruds.update');
 
-Route::put('notas/{notas}/editar', 'App\Http\Controllers\NotasController@update')->name('notas.update');
+Route::delete('cruds/{id}', 'App\Http\Controllers\CrudsController@destroy' )->name('cruds.destroy');
